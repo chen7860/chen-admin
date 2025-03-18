@@ -41,6 +41,7 @@
     "@zxcvbn-ts/core": "^1.0.0-beta.0",
     "ant-design-vue": "2.2.8",
     "axios": "^0.24.0",
+    "cesium": "^1.126.0",
     "crypto-js": "^4.1.1",
     "echarts": "^5.2.2",
     "lodash-es": "^4.17.21",
@@ -53,8 +54,8 @@
     "qs": "^6.10.1",
     "resize-observer-polyfill": "^1.5.1",
     "sortablejs": "^1.14.0",
+    "vite-plugin-cesium": "^1.2.23",
     "vue": "^3.2.21",
-    "vue-cropper": "^0.5.10",
     "vue-i18n": "^9.1.9",
     "vue-router": "^4.0.12",
     "vue-types": "^4.1.1"

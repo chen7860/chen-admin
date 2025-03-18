@@ -128,7 +128,7 @@
   }
 
   .@{prefix-cls} {
-    min-height: 100%;
+    min-height: 100vh;
     overflow: hidden;
     @media (max-width: @screen-xl) {
       background-color: #293146;
@@ -171,6 +171,7 @@
     }
 
     .container {
+      height: 100vh;
       .@{logo-prefix-cls} {
         display: flex;
         width: 60%;

@@ -19,6 +19,7 @@
     </PageHeader>
 
     <div class="overflow-hidden" :class="getContentClass" :style="getContentStyle" ref="contentRef">
+      <CesiumMap v-if="route.meta.useCesium" />
       <slot></slot>
     </div>
 
@@ -36,6 +37,7 @@
   import { CSSProperties, PropType, provide } from 'vue';
 
   import { defineComponent, computed, watch, ref, unref } from 'vue';
+  import { useRoute } from 'vue-router';
   import PageFooter from './PageFooter.vue';
 
   import { useDesign } from '/@/hooks/web/useDesign';
@@ -70,6 +72,8 @@
       const footerRef = ref(null);
       const { prefixCls } = useDesign('page-wrapper');
 
+      const route = useRoute();
+      console.log(route);
       provide(
         PageWrapperFixedHeightKey,
         computed(() => props.fixedHeight),
@@ -151,6 +155,7 @@
         getHeaderSlots,
         prefixCls,
         getShowFooter,
+        route,
         omit,
         getContentClass,
       };
@@ -162,10 +167,6 @@
 
   .@{prefix-cls} {
     position: relative;
-
-    .@{prefix-cls}-content {
-      margin: 16px;
-    }
 
     .ant-page-header {
       &:empty {
