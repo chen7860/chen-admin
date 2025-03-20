@@ -23,12 +23,17 @@
   import { ref } from 'vue';
   import { PageWrapper } from '/@/components/Page';
   import RainEffect from '/@/utils/cesium/rainEffect';
+  import * as Cesium from 'cesium';
 
   const toolList = ['小雨', '中雨', '大雨'];
   const active = ref('');
   let rainEffect: RainEffect;
 
-  function handleChangeTool(item) {
+  async function handleChangeTool(item) {
+    const tileset = await Cesium.Cesium3DTileset.fromIonAssetId(40866);
+  viewer.scene.primitives.add(tileset);
+  viewer.zoomTo(tileset);
+  return
     // 开启下雨效果
     if (!rainEffect) {
       rainEffect = new RainEffect();

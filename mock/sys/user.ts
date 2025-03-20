@@ -82,6 +82,16 @@ export default [
     },
   },
   {
+    url: '/basic-api/getConcurrency',
+    timeout: 200,
+    method: 'get',
+    response: (request: requestParams) => {
+      const token = getRequestToken(request);
+      if (!token) return resultError('Invalid token');
+      return resultSuccess({ status: 'success' });
+    },
+  },
+  {
     url: '/basic-api/getPermCode',
     timeout: 200,
     method: 'get',

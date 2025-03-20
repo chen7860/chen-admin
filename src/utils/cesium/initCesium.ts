@@ -30,7 +30,7 @@ export class initCesium {
       baseLayerPicker: false,
       timeline: false,
       // imageryProvider: false, // 禁用默认影像图层
-      terrainProvider: new Cesium.EllipsoidTerrainProvider({}), // 移除自带地形
+      terrain: Cesium.Terrain.fromWorldTerrain(),
     });
     window.viewer = viewer;
     (viewer.cesiumWidget.creditContainer as HTMLElement).style.display = 'none';
@@ -40,12 +40,12 @@ export class initCesium {
     const subdomains = ['0', '1', '2', '3', '4', '5', '6', '7'];
 
     // 影像底图
-    const tiandituImageryProvider = new Cesium.UrlTemplateImageryProvider({
-      url: `https://t{s}.tianditu.gov.cn/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={z}&TileRow={y}&TileCol={x}&style=default&format=tiles&tk=${tdtKey}`,
-      subdomains: subdomains,
-      tilingScheme: new Cesium.WebMercatorTilingScheme(),
-      maximumLevel: 18,
-    });
+    // const tiandituImageryProvider = new Cesium.UrlTemplateImageryProvider({
+    //   url: `https://t{s}.tianditu.gov.cn/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&TileMatrix={z}&TileRow={y}&TileCol={x}&style=default&format=tiles&tk=${tdtKey}`,
+    //   subdomains: subdomains,
+    //   tilingScheme: new Cesium.WebMercatorTilingScheme(),
+    //   maximumLevel: 18,
+    // });
 
     // 注记
     const tiandituTextProvider = new Cesium.UrlTemplateImageryProvider({
@@ -55,7 +55,7 @@ export class initCesium {
       maximumLevel: 18,
     });
 
-    viewer.imageryLayers.addImageryProvider(tiandituImageryProvider);
+    // viewer.imageryLayers.addImageryProvider(tiandituImageryProvider);
     viewer.imageryLayers.addImageryProvider(tiandituTextProvider);
     myFly();
   }
