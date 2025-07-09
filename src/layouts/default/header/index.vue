@@ -33,6 +33,8 @@
 
     <!-- action  -->
     <div :class="`${prefixCls}-action`">
+      <AppScreenshot />
+
       <AppSearch :class="`${prefixCls}-action__item `" v-if="getShowSearch" />
 
       <ErrorAction v-if="getUseErrorHandle" :class="`${prefixCls}-action__item error-action`" />
@@ -65,6 +67,7 @@
   import LayoutTrigger from '../trigger/index.vue';
 
   import { AppSearch } from '/@/components/Application';
+  import { AppScreenshot } from '/@/components/Application';
 
   import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
   import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
@@ -94,6 +97,7 @@
       FullScreen,
       Notify,
       AppSearch,
+      AppScreenshot,
       ErrorAction,
       SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue'), {
         loading: true,

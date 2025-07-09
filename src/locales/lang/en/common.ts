@@ -7,6 +7,7 @@ export default {
   delText: 'Delete',
   resetText: 'Reset',
   searchText: 'Search',
+  screenshot: 'Screenshot',
   queryText: 'Search',
 
   inputText: 'Please enter',

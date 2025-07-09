@@ -38,6 +38,7 @@
     "@iconify/iconify": "^2.0.4",
     "@vueuse/core": "^6.7.4",
     "@vueuse/shared": "^6.7.4",
+    "@zumer/snapdom": "^1.8.0",
     "@zxcvbn-ts/core": "^1.0.0-beta.0",
     "ant-design-vue": "2.2.8",
     "axios": "^0.24.0",

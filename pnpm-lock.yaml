@@ -27,6 +27,9 @@ importers:
       '@vueuse/shared':
         specifier: ^6.7.4
         version: 6.9.2(vue@3.5.13(typescript@4.9.5))
+      '@zumer/snapdom':
+        specifier: ^1.8.0
+        version: 1.8.0
       '@zxcvbn-ts/core':
         specifier: ^1.0.0-beta.0
         version: 1.2.0
@@ -1686,6 +1689,9 @@ packages:
   '@zip.js/zip.js@2.7.57':
     resolution: {integrity: sha512-BtonQ1/jDnGiMed6OkV6rZYW78gLmLswkHOzyMrMb+CAR7CZO8phOHO6c2qw6qb1g1betN7kwEHhhZk30dv+NA==}
     engines: {bun: '>=0.7.0', deno: '>=1.0.0', node: '>=16.5.0'}
+
+  '@zumer/snapdom@1.8.0':
+    resolution: {integrity: sha512-+xjVImca5k/nUxh0yUcdwcRzLFwSzNwzEfzerlUIC8IOnW+ikengvZuSODUXdOi+T7xuLgpj0HTXf+cRjWW/0w==}
 
   '@zxcvbn-ts/core@1.2.0':
     resolution: {integrity: sha512-zaGUGolat04MB1ImVMbP8o7uDytKRLahZO6VSWeW6tK+tko6vHMl/eNsdKWSSWG7OR45BeUy7nBvFg79HYSdGA==}
@@ -8885,6 +8891,8 @@ snapshots:
       - supports-color
 
   '@zip.js/zip.js@2.7.57': {}
+
+  '@zumer/snapdom@1.8.0': {}
 
   '@zxcvbn-ts/core@1.2.0': {}
 
